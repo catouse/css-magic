@@ -1,0 +1,26 @@
+<style>
+a:empty:before {
+  content: attr(href);
+  color: #2196F3;
+  font-weight: bold;
+  border-bottom: 1px dashed #2196F3;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div>
+          <p>这里包含一个空链接 <a href="http://zui.sexy" title="zui 官方网站"></a>，使用伪类 <code>:empty</code> 和 <code>:before</code> 可以使其显示出来，并使得其可以被点击。 </p>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;p&gt;&#x8fd9;&#x91cc;&#x5305;&#x542b;&#x4e00;&#x4e2a;&#x7a7a;&#x94fe;&#x63a5; &lt;a href=&quot;http://zui.sexy&quot; title=&quot;zui &#x5b98;&#x65b9;&#x7f51;&#x7ad9;&quot;&gt;&lt;/a&gt;&#xff0c;&#x4f7f;&#x7528;&#x4f2a;&#x7c7b; &lt;code&gt;:empty&lt;/code&gt; &#x548c; &lt;code&gt;:before&lt;/code&gt; &#x53ef;&#x4ee5;&#x4f7f;&#x5176;&#x663e;&#x793a;&#x51fa;&#x6765;&#x3002; &lt;/p&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>a:empty:before {
+  content: attr(href);
+  color: #2196F3;
+  font-weight: bold;
+  border-bottom: 1px dashed #2196F3;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

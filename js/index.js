@@ -12,13 +12,13 @@ var contents = [{
         {name: 'fix-border', title: '修正边框', classes: ':last-child'},
         {name: 'table-striped', title: '表格隔行变色', classes: ':nth-child'},
         {name: 'selection-style', title: '选中文本外观', classes: '::selection'},
-        {name: 'disabled-style', title: '禁用文本外观', classes: ':disabled'}
+        {name: 'disabled-style', title: '禁用控件外观', classes: ':disabled'}
 ]}, {
     name: 'advance',
     title: '高级',
     items: [
         {name: 'hide-empty-content', title: '隐藏空内容', classes: ':empty'},
-        {name: 'show-empty-links', title: '处理空链接', classes: ':empty', star: false},
+        {name: 'show-empty-links', title: '处理空链接', classes: ':empty,:after/:before', star: false},
         {name: 'select-inputs', title: '选中表单控件（不包括按钮）', classes: ':not'},
         {name: 'toggle-button', title: '按钮切换', classes: ':hover'},
         {name: 'dropdown-menu', title: '下拉菜单', classes: ':hover'},
@@ -131,7 +131,7 @@ $(function() {
 
     var srollCallback;
     $(window).on('listenScroll', function(e, isInScroll, scrollDirection, scrollTop) {
-        if(isInScroll && scrollDirection === 'down' && scrollTop < $(window).height() && !scrolling) {
+        if(isInScroll && scrollDirection === 'down' && scrollTop < $(window).height()/2 && !scrolling) {
             clearTimeout(srollCallback);
             srollCallback = setTimeout(scrollToContent, 100);
          } /* else if(isInScroll && scrollDirection === 'up' && scrollTop < $(window).height() && !scrolling) {
@@ -158,11 +158,12 @@ $(function() {
             $heading.append($element.find('.avatar').clone().attr('data-skin', null));
             $heading.append($element.find('.content > .title').clone());
             if(item.star !== false) $heading.find('.title').append('&nbsp;&nbsp;<i class="icon icon-star text-yellow"></i>');
-            $heading.append('<nav class="nav"><a data-dismiss="display"><i class="icon icon-remove muted"></i></a></nav>');
+            $heading.append('<nav class="nav"><a class="text-link" href="' + item.name + '.html" target="_blank"><i class="icon icon-code"></i></a><a data-dismiss="display"><i class="icon icon-remove muted"></i></a></nav>');
             $target.prepend($heading);
 
-            var $magic = $('<div class="footer"><div class="list-item multi-lines gray divider-top"><div class="content"><div class="subtitle">魔法类</div><div class="magic-classes">' + $element.find('.magic-classes').html() + '</div></div></div></div>')
-            $target.append($magic);
+            var $magic = $('<div class="list-item multi-lines gray divider magic-classes-header"><div class="content"><div class="subtitle">魔法类</div><div class="magic-classes">' + $element.find('.magic-classes').html() + '</div></div></div>')
+            window.prettyPrint();
+            $target.children('.content').listenScroll({container: 'parent'}).prepend($magic);
         }
     });
 });

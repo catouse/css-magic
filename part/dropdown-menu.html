@@ -1,0 +1,124 @@
+<style>
+.dropdown {
+    position: relative;
+}
+.dropdown:hover > .dropdown-menu,
+.dropdown.open > .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: initial;
+}
+.dropdown-menu  {
+    padding: 0;
+    overflow: visible;
+}
+.dropdown-menu > li {
+    display: block;
+    position: relative;
+
+}
+.dropdown-menu > li > a {
+    padding: .5rem;
+    display: block;
+}
+.dropdown-menu > li > a > .icon-caret-right {
+    float: right;
+}
+.dropdown-menu > li:hover > a + .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    max-height: initial;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="space">
+          <div class="dropdown">
+            <a class="btn primary">检查下拉菜单 <i class="icon-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a>产品</a></li>
+              <li>
+                <a>项目 <i class="icon-caret-right"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a>火星救援</a></li>
+                  <li>
+                    <a>太阳系远征 <i class="icon-caret-right"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a>半人马</a></li>
+                      <li><a>红蝎子</a></li>
+                      <li><a>阿尔法狗</a></li>
+                    </ul>
+                  </li>
+                  <li><a>月球漫步</a></li>
+                </ul>
+              </li>
+              <li><a>任务</a></li>
+            </ul>
+          </div>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;a class=&quot;btn primary&quot;&gt;&#x68c0;&#x67e5;&#x4e0b;&#x62c9;&#x83dc;&#x5355; &lt;i class=&quot;icon-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    &lt;li&gt;&lt;a&gt;&#x4ea7;&#x54c1;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a&gt;&#x9879;&#x76ee; &lt;i class=&quot;icon-caret-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a&gt;&#x706b;&#x661f;&#x6551;&#x63f4;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a&gt;&#x592a;&#x9633;&#x7cfb;&#x8fdc;&#x5f81; &lt;i class=&quot;icon-caret-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;ul class=&quot;dropdown-menu&quot;&gt;
+            &lt;li&gt;&lt;a&gt;&#x534a;&#x4eba;&#x9a6c;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt;&#x7ea2;&#x874e;&#x5b50;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt;&#x963f;&#x5c14;&#x6cd5;&#x72d7;&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;&#x6708;&#x7403;&#x6f2b;&#x6b65;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a&gt;&#x4efb;&#x52a1;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.dropdown {
+    position: relative;
+}
+.dropdown:hover > .dropdown-menu,
+.dropdown.open > .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: initial;
+}
+.dropdown-menu  {
+    padding: 0;
+    overflow: visible;
+}
+.dropdown-menu > li {
+    display: block;
+    position: relative;
+
+}
+.dropdown-menu > li > a {
+    padding: .5rem;
+    display: block;
+}
+.dropdown-menu > li > a > .icon-caret-right {
+    float: right;
+}
+.dropdown-menu > li:hover > a + .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    max-height: initial;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

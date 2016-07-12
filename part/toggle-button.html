@@ -1,0 +1,68 @@
+<style>
+.toggle-btn {
+  position: relative;
+  width: 6rem;
+  border: none;
+  overflow: hidden;
+}
+.toggle-btn > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 1.5rem;
+  transition: .2s top;
+}
+.toggle-btn > .hover-content {
+  top: 1.5rem;
+  background-color: #76be35;
+}
+.toggle-btn:hover > .normal-content {
+  top: -1.5rem;
+}
+.toggle-btn:hover > .hover-content {
+  top: 0;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="box">
+          <button type="button" class="btn toggle-btn primary">
+            <div class="normal-content"><i class="icon-download-alt"></i> 立即下载</div>
+            <div class="hover-content">大小：120GB</div>
+          </button>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;button type=&quot;button&quot; class=&quot;btn toggle-btn primary&quot;&gt;
+  &lt;div class=&quot;normal-content&quot;&gt;&lt;i class=&quot;icon-download-alt&quot;&gt;&lt;/i&gt; &#x7acb;&#x5373;&#x4e0b;&#x8f7d;&lt;/div&gt;
+  &lt;div class=&quot;hover-content&quot;&gt;&#x5927;&#x5c0f;&#xff1a;120GB&lt;/div&gt;
+&lt;/button&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.toggle-btn {
+  position: relative;
+  width: 6rem;
+  border: none;
+  overflow: hidden;
+}
+.toggle-btn > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 1.5rem;
+  transition: .2s top;
+}
+.toggle-btn > .hover-content {
+  top: 1.5rem;
+  background-color: #76be35;
+}
+.toggle-btn:hover > .normal-content {
+  top: -1.5rem;
+}
+.toggle-btn:hover > .hover-content {
+  top: 0;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

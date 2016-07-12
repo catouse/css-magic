@@ -38,8 +38,18 @@
 }
 
 #displayTarget-contentModal {width: 80%}
-#displayTarget-contentModal .footer .magic-classes {margin-top: .3rem}
-#displayTarget-contentModal .footer .magic-classes > .code {background-color: #fff; padding: .1rem .2rem; border: .05rem solid #e75c54; border-radius: .15rem}
+#displayTarget-contentModal > .content .list > .item > .content > div + div {margin-top: .2rem}
+#displayTarget-contentModal > .content .list > .item > .content > div > pre {margin-bottom: 0}
+#displayTarget-contentModal > .content .magic-classes > .code {display: inline-block; margin-top: .2rem; background-color: #fff; padding: .05rem .2rem; border: .05rem solid #e75c54; border-radius: .15rem}
 @media (max-width: 30rem) {
   #displayTarget-contentModal {width: 100%}
 }
+@media (min-width: 35rem) {
+  #displayTarget-contentModal  > .heading {padding: .75rem}
+  #displayTarget-contentModal  > .content {padding: 0 0.5rem 0.5rem}
+  #displayTarget-contentModal  > .content > .magic-classes-header {margin: 0 -0.5rem .25rem; padding: 1rem}
+}
+
+.code.text-yellow {color: #ef8e00}
+.code.text-red {color: #e75c54}
+.code.text-purple {color: #b06ce5}

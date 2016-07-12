@@ -1,0 +1,31 @@
+<style>
+.img-box {
+  overflow: hidden;
+  display: block;
+  margin-bottom: .5rem;
+}
+.img-box:hover > img {
+  transform: scale(1.5);
+  transition: transform 1s;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <a class="img-box"><img src="img/magic-tree.png" alt=""></a>
+        <div class="muted">点击图片查看效果</div>
+        <div><pre class="prettyprint"><code>&lt;a class=&quot;img-box&quot;&gt;&lt;img src=&quot;img/magic-tree.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.img-box {
+  overflow: hidden;
+  display: block;
+  margin-bottom: .5rem;
+}
+.img-box:hover > img {
+  transform: scale(1.5);
+  transition: transform .2s;
+}</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>

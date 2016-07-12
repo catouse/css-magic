@@ -1,0 +1,65 @@
+<style>
+.img-box {
+  overflow: hidden;
+  display: block;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.img-box > .back-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,.9);
+}
+.img-box:hover > .back-content {
+  opacity: 1;
+  visibility: visible;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <a class="img-box">
+          <img src="img/magic-tree.png" alt="">
+          <div class="back-content flex flex-center">
+            <h1 class="text-center" style="font-size: 2rem;"><span class="code text-yellow">C</span><span class="code text-red">S</span><span class="code text-purple">S</span> 魔法类</h1>
+          </div>
+        </a>
+        <div class="muted">点击图片查看效果</div>
+        <div><pre class="prettyprint"><code>&lt;a class=&quot;img-box&quot;&gt;
+  &lt;img src=&quot;img/magic-tree.png&quot; alt=&quot;&quot;&gt;
+  &lt;div class=&quot;back-content flex flex-center&quot;&gt;
+    &lt;h1 class=&quot;text-center&quot; style=&quot;font-size: 2rem;&quot;&gt;&lt;span class=&quot;code text-yellow&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;code text-red&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;code text-purple&quot;&gt;S&lt;/span&gt; &#x9b54;&#x6cd5;&#x7c7b;&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.img-box {
+  overflow: hidden;
+  display: block;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.img-box > .back-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,.9);
+}
+.img-box:hover > .back-content {
+  opacity: 1;
+  visibility: visible;
+}</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
