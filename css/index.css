@@ -1,0 +1,45 @@
+@keyframes float {
+  0%   {transform: translate(0, 0) rotateY(10deg);}
+  25%  {transform: translate(1rem, 1rem);}
+  50%  {transform: translate(0, -.5rem) rotateY(-10deg);}
+  75%  {transform: translate(-1rem, 0);}
+  100% {transform: translate(.5rem, 1rem) rotateY(10deg);}
+}
+
+@keyframes down {
+  0%   {color: #2196F3; transform: translateY(0rem);}
+  25%  {color: #b06ce5; transform: translateY(.5rem);}
+  50%  {color: #e75c54; transform: translateY(0rem);}
+  75%  {color: #ef8e00; transform: translateY(-.5rem);}
+  100% {color: #76be35; transform: translateY(0rem);}
+}
+
+#lead {min-height: 10rem; position: relative; overflow: hidden;}
+#lead > .background {background: url(../img/magic-tree.png) no-repeat center; background-size: cover; z-index: 0; }
+#lead > .wrapper {position: relative; z-index: 1; width: 20rem; height: 20rem; animation: float 20s infinite linear alternate;}
+#lead > .wrapper:before {content: ' '; display: block; background-color: rgba(255,255,255,.4); position: absolute; left: 0; top: 0; right: 0; bottom: 0; transform: rotate(45deg); border-radius: 3rem; box-shadow: .1rem .1rem 2rem rgba(0,0,0,.3); border: .2rem solid rgba(255,255,255,.1); border-right-color: rgba(0,0,0,.1); border-top-color: rgba(0,0,0,.1)}
+#lead > .wrapper > .content {position: relative; z-index: 2}
+#lead > .wrapper > .content > h1 {font-size: 3.5rem;}
+#lead:hover > .wrapper {transform: translateY(3rem);}
+@media (max-width: 25rem) {
+  #lead > .wrapper {width: 13rem; height: 13rem;}
+  #lead > .wrapper > .content > h1 {font-size: 2.4rem;}
+  #lead > .wrapper > .content > h2 {font-size: .7rem;}
+}
+
+#scrollBtn {position: relative;}
+#scrollBtn > .icon {animation: down 5s infinite linear alternate;}
+
+#contentList .magic-classes > .code:after {content: ','; color: #333}
+#contentList .magic-classes > .code:last-child:after {display: none}
+#contentList .avatar {font-size: .6rem}
+@media (max-width: 50rem) {
+  #contentList > .cell-4 {width: 100%}
+}
+
+#displayTarget-contentModal {width: 80%}
+#displayTarget-contentModal .footer .magic-classes {margin-top: .3rem}
+#displayTarget-contentModal .footer .magic-classes > .code {background-color: #fff; padding: .1rem .2rem; border: .05rem solid #e75c54; border-radius: .15rem}
+@media (max-width: 30rem) {
+  #displayTarget-contentModal {width: 100%}
+}
