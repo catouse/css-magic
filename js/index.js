@@ -150,6 +150,9 @@ $(function() {
         selector: 'a.item',
         trigger: 'click',
         name: "contentModal",
+        remoteError: function(e, options) {
+            console.log("无法加载：", e.responseURL);
+        },
         displayed: function(options) {
             var $target = options.$target;
             var $element = $(options.element);

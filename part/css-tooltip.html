@@ -1,0 +1,93 @@
+<style>
+.has-tooltip {
+  position: relative;
+}
+.has-tooltip:before {
+  content: attr(data-tooltip);
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,.7);
+  color: #fff;
+  line-height: 1rem;
+  padding: .25rem .5rem;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .6rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+}
+.has-tooltip:after {
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 0;
+  border: .5rem solid transparent;
+  border-top-color: rgba(0,0,0,.7);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  opacity: 0;
+  transition: all .2s;
+}
+.has-tooltip:hover:before,
+.has-tooltip:hover:after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -.5rem);
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="space">
+          <div data-tooltip="兰亭集序 (王羲之)" class="box green block has-tooltip">夫人之相与，俯仰一世，或取诸怀抱，悟言一室之内；或因寄所托，放浪形骸之外。</div>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;div data-tooltip=&quot;&#x5170;&#x4ead;&#x96c6;&#x5e8f; (&#x738b;&#x7fb2;&#x4e4b;)&quot; class=&quot;box green block has-tooltip&quot;&gt;&#x592b;&#x4eba;&#x4e4b;&#x76f8;&#x4e0e;&#xff0c;&#x4fef;&#x4ef0;&#x4e00;&#x4e16;&#xff0c;&#x6216;&#x53d6;&#x8bf8;&#x6000;&#x62b1;&#xff0c;&#x609f;&#x8a00;&#x4e00;&#x5ba4;&#x4e4b;&#x5185;&#xff1b;&#x6216;&#x56e0;&#x5bc4;&#x6240;&#x6258;&#xff0c;&#x653e;&#x6d6a;&#x5f62;&#x9ab8;&#x4e4b;&#x5916;&#x3002;&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.has-tooltip {
+  position: relative;
+}
+.has-tooltip:before {
+  content: attr(data-tooltip);
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,.7);
+  color: #fff;
+  line-height: 1rem;
+  padding: .25rem .5rem;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .6rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+}
+.has-tooltip:after {
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 0;
+  border: .5rem solid transparent;
+  border-top-color: rgba(0,0,0,.7);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  opacity: 0;
+  transition: all .2s;
+}
+.has-tooltip:hover:before,
+.has-tooltip:hover:after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -.5rem);
+}</code></pre></div>
+<div>参考：<a href="http://kushagragour.in/lab/hint/" class="text-link" target="_blank">Hint.css</a></div>
+      </div>
+     </div>
+  </div>
+</div>

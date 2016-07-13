@@ -1,0 +1,64 @@
+<style>
+.has-corner {
+  position: relative;
+  border: .05rem solid #ddd;
+  overflow: hidden;
+}
+.has-corner:before,
+.has-corner:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  box-shadow: .1rem .1rem .5rem rgba(0,0,0,.3);
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(45deg);
+}
+.has-corner:before {
+  right: -2rem;
+  top: -2rem;
+}
+.has-corner:after {
+  left: -2rem;
+  bottom: -2rem;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div>
+          <div class="has-corner">
+            <img src="img/magic-tree.png" alt="">
+          </div>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;div class=&quot;has-corner&quot;&gt;
+  &lt;img src=&quot;img/magic-tree.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.has-corner {
+  position: relative;
+  border: .05rem solid #ddd;
+  overflow: hidden;
+}
+.has-corner:before,
+.has-corner:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  box-shadow: .1rem .1rem .5rem rgba(0,0,0,.3);
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(45deg);
+}
+.has-corner:before {
+  right: -2rem;
+  top: -2rem;
+}
+.has-corner:after {
+  left: -2rem;
+  bottom: -2rem;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

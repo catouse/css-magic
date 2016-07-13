@@ -1,0 +1,56 @@
+<style>
+ul.comma-list {
+  padding-left: 0;
+}
+ul.comma-list > li {
+ display: inline-block;
+}
+ul.comma-list > li:after {
+ content: ", ";
+}
+ul.comma-list > li:last-child:after {
+ display: none;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="box">
+          <p>今日作业：</p>
+          <ul>
+            <li>写字两页</li>
+            <li>背古诗三首</li>
+            <li>作文一篇</li>
+            <li>算术练习</li>
+          </ul>
+          <p>逗号分隔列表：</p>
+          <ul class="comma-list">
+            <li>写字两页</li>
+            <li>背古诗三首</li>
+            <li>作文一篇</li>
+            <li>算术练习</li>
+          </ul>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;ul class=&quot;comma-list&quot;&gt;
+  &lt;li&gt;&#x5199;&#x5b57;&#x4e24;&#x9875;&lt;/li&gt;
+  &lt;li&gt;&#x80cc;&#x53e4;&#x8bd7;&#x4e09;&#x9996;&lt;/li&gt;
+  &lt;li&gt;&#x4f5c;&#x6587;&#x4e00;&#x7bc7;&lt;/li&gt;
+  &lt;li&gt;&#x7b97;&#x672f;&#x7ec3;&#x4e60;&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>ul.comma-list {
+  padding-left: 0;
+}
+ul.comma-list > li {
+ display: inline-block;
+}
+ul.comma-list > li:after {
+ content: ", ";
+}
+ul.comma-list > li:last-child:after {
+ display: none;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

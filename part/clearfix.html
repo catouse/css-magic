@@ -1,0 +1,42 @@
+<style>
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: ' ';
+}
+.clearfix:after {
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="box outline">
+          <div class="clearfix">
+            <div class="pull-left box primary">浮动一</div>
+            <div class="pull-left box green">浮动一</div>
+          </div>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;div class=&quot;pull-left&quot;&gt;&#x6d6e;&#x52a8;&#x4e00;&lt;/div&gt;
+  &lt;div class=&quot;pull-left&quot;&gt;&#x6d6e;&#x52a8;&#x4e00;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.clearfix:before,
+.clearfix:after
+{
+    display: table;
+
+    content: ' ';
+}
+.clearfix:after
+{
+    clear: both;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

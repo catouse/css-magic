@@ -1,0 +1,72 @@
+<style>
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.loading {
+  color: transparent!important;
+}
+.loading > * {
+  visibility: hidden;
+}
+.loading:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: .9rem;
+  height: .9rem;
+  margin-top: -.45rem;
+  margin-left: -.45rem;
+  content: ' ';
+  transition: opacity .3s cubic-bezier(.175, .885, .32, 1);
+  animation: spin 2s infinite linear;
+  border: .15rem dotted rgba(255, 255, 255, .5);
+  border-color: rgba(255, 255, 255, .1) rgba(255, 255, 255, .4) rgba(255, 255, 255, .5) rgba(255, 255, 255, .6);
+  border-radius: 50%;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="primary loading relative box">在加载的时候我是隐藏的</div>
+        <div><pre class="prettyprint"><code>&lt;div class=&quot;primary loading relative box&quot;&gt;&#x5728;&#x52a0;&#x8f7d;&#x7684;&#x65f6;&#x5019;&#x6211;&#x662f;&#x9690;&#x85cf;&#x7684;&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.loading {
+  color: transparent!important;
+}
+.loading > * {
+  visibility: hidden;
+}
+.loading:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: .9rem;
+  height: .9rem;
+  margin-top: -.45rem;
+  margin-left: -.45rem;
+  content: ' ';
+  transition: opacity .3s cubic-bezier(.175, .885, .32, 1);
+  animation: spin 2s infinite linear;
+  border: .15rem dotted rgba(255, 255, 255, .5);
+  border-color: rgba(255, 255, 255, .1) rgba(255, 255, 255, .4) rgba(255, 255, 255, .5) rgba(255, 255, 255, .6);
+  border-radius: 50%;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

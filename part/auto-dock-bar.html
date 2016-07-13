@@ -1,0 +1,53 @@
+<style>
+#displayTarget-contentModal {height: 99.5%}
+.auto-dock-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(99%);
+  opacity: 0;
+  transition: transform .3s, opacity .1s;
+}
+.auto-dock-nav:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+<div class="content" style="padding-bottom: 2rem; overflow: hidden">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div>
+          <p>将鼠标移动到页面底部显示导航栏。</p>
+          <p>此示例仅限桌面端用鼠标仅限操作，移动端无法查看效果。</p>
+          <nav class="nav auto-dock-nav dark">
+            <a><i class="icon-home"></i>&nbsp;首页</a>
+            <a>项目</a>
+            <a>产品</a>
+            <a>任务</a>
+          </nav>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;nav class=&quot;nav auto-dock-nav dark&quot;&gt;
+  &lt;a&gt;&lt;i class=&quot;icon-home&quot;&gt;&lt;/i&gt;&amp;nbsp;&#x9996;&#x9875;&lt;/a&gt;
+  &lt;a&gt;&#x9879;&#x76ee;&lt;/a&gt;
+  &lt;a&gt;&#x4ea7;&#x54c1;&lt;/a&gt;
+  &lt;a&gt;&#x4efb;&#x52a1;&lt;/a&gt;
+&lt;/nav&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.auto-dock-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(99%);
+  opacity: 0;
+  transition: transform .3s, opacity .1s;
+}
+.auto-dock-nav:hover {
+  opacity: 1;
+  transform: translateY(0);
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

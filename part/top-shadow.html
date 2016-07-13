@@ -1,0 +1,40 @@
+<style>
+.has-top-shadow {
+  position: relative;
+  overflow: hidden;
+}
+.has-top-shadow:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  height: 20px;
+  box-shadow: 0 .3rem 2rem rgba(0,0,0,.5);
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="has-top-shadow"><img src="img/magic-tree.png" alt=""></div>
+        <div><pre class="prettyprint"><code>&lt;div class=&quot;has-top-shadow&quot;&gt;&lt;img src=&quot;img/magic-tree.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.has-top-shadow {
+  position: relative;
+  overflow: hidden;
+}
+.has-top-shadow:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  height: 20px;
+  box-shadow: 0 .3rem 2rem rgba(0,0,0,.5);
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<style>
+.nav-arrow > div {
+  display: inline-block;
+  line-height: 2rem;
+  background-color: #76be35;
+  color: #fff;
+  position: relative;
+  margin-right: .5rem;
+  padding: 0 .5rem 0 1.5rem;
+}
+.nav-arrow > div:before,
+.nav-arrow > div:after {
+  content: ' ';
+  display: block;
+  border: 1rem solid transparent;
+  border-left-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 0;
+}
+.nav-arrow > div:after {
+  left: auto;
+  right: -2rem;
+  border-color: transparent;
+  border-left-color: #76be35;
+  z-index: 1;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div>
+          <nav class="nav-arrow">
+            <div>我家</div>
+            <div>大院</div>
+            <div>的井</div>
+          </nav>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;nav class=&quot;nav-arrow&quot;&gt;
+  &lt;div&gt;&#x6211;&#x5bb6;&lt;/div&gt;
+  &lt;div&gt;&#x5927;&#x9662;&lt;/div&gt;
+  &lt;div&gt;&#x7684;&#x4e95;&lt;/div&gt;
+&lt;/nav&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.nav-arrow > div {
+  display: inline-block;
+  line-height: 2rem;
+  background-color: #76be35;
+  color: #fff;
+  position: relative;
+  margin-right: .5rem;
+  padding: 0 .5rem 0 1.5rem;
+}
+.nav-arrow > div:before,
+.nav-arrow > div:after {
+  content: ' ';
+  display: block;
+  border: 1rem solid transparent;
+  border-left-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 0;
+}
+.nav-arrow > div:after {
+  left: auto;
+  right: -2rem;
+  border-color: transparent;
+  border-left-color: #76be35;
+  z-index: 1;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

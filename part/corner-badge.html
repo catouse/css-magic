@@ -1,0 +1,48 @@
+<style>
+.has-badge {
+  position: relative;
+}
+.has-badge:before {
+  content: attr(data-badge);
+  display: block;
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+  height: 1rem;
+  line-height: 1rem;
+  border-radius: .5rem;
+  background: red;
+  color: #fff;
+  min-width: 1rem;
+  text-align: center;
+  padding: 0 .25rem;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="space-sm"><button data-badge="2" class="green btn has-badge"><i class="icon-check-board"></i> 今日待办</button></div>
+        <div><pre class="prettyprint"><code>&lt;button data-badge=&quot;2&quot; class=&quot;green btn has-badge&quot;&gt;&lt;i class=&quot;icon-check-board&quot;&gt;&lt;/i&gt; &#x4eca;&#x65e5;&#x5f85;&#x529e;&lt;/button&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.has-badge {
+  position: relative;
+}
+.has-badge:before {
+  content: attr(data-badge);
+  display: block;
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+  height: 1rem;
+  line-height: 1rem;
+  border-radius: .5rem;
+  background: red;
+  color: #fff;
+  min-width: 1rem;
+  text-align: center;
+  padding: 0 .25rem;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

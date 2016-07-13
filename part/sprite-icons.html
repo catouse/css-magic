@@ -1,0 +1,50 @@
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="box">
+          <p>Sprite 图片：</p>
+          <img src="img/sprite.png" alt="" class="shadow">
+          <p>Sprite 图标：</p>
+          <p><i class="sprite sprite-face1"></i></p>
+          <p><i class="sprite sprite-face2"></i></p>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;p&gt;Sprite &#x56fe;&#x7247;&#xff1a;&lt;/p&gt;
+&lt;img src=&quot;img/sprite.png&quot; alt=&quot;&quot; class=&quot;shadow&quot;&gt;
+&lt;p&gt;Sprite &#x56fe;&#x6807;&#xff1a;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&quot;sprite sprite-face1&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&quot;sprite sprite-face2&quot;&gt;&lt;/i&gt;&lt;/p&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.sprite:before {
+  content: ' ';
+  background-position: no-repeat;
+  background: url(img/sprite.png) no-repeat;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.sprite-face1:before {
+  background-position: 0 0;
+}
+.sprite-face2:before {
+  background-position: -30px 0;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>
+<style>
+.sprite:before {
+  content: ' ';
+  background-position: no-repeat;
+  background: url(img/sprite.png) no-repeat;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.sprite-face1:before {
+  background-position: 0 0;
+}
+.sprite-face2:before {
+  background-position: -30px 0;
+}
+</style>

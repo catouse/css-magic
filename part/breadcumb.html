@@ -1,0 +1,58 @@
+<style>
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\00a0";
+}
+.breadcrumb > .active {
+  color: #808080;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div>
+          <ul class="breadcrumb">
+            <li><a href=""><i class="icon icon-home"></i></a></li>
+            <li><a href="">我家</a></li>
+            <li><a href="">大院</a></li>
+            <li class="active">的井</li>
+          </ul>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;ul class=&quot;breadcrumb&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;icon icon-home&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;&#x6211;&#x5bb6;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;&#x5927;&#x9662;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;&#x7684;&#x4e95;&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\00a0";
+}
+.breadcrumb > .active {
+  color: #808080;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

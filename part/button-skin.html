@@ -1,0 +1,78 @@
+<style>
+.btn-skin {
+    position: relative;
+    background: #03A9F4;
+    color: #fff;
+}
+.btn-skin:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: ' ';
+    transition: .3s cubic-bezier(.175, .885, .32, 1);
+    transform: scale(.6);
+    opacity: 0;
+    background-color: transparent;
+    box-shadow: 0 0 0 .05rem #000;
+}
+.btn-skin:hover:after,
+.btn-skin.hover:after {
+    transform: scale(1);
+    opacity: .15;
+    background-color: #000;
+}
+.btn-skin:focus {
+    outline: none;
+}
+.btn-skin:focus:after {
+    transform: scale(1);
+    opacity: .2;
+    background-color: rgba(0, 0, 0, .8);
+    box-shadow: inset 0 0 0 .05rem rgba(0, 0, 0, .9);
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div><button type="button" class="btn btn-skin">按钮</button></div>
+        <div><pre class="prettyprint"><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-skin&quot;&gt;&#x6309;&#x94ae;&lt;/button&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.btn-skin {
+    position: relative;
+}
+.btn-skin:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: ' ';
+    transition: .3s cubic-bezier(.175, .885, .32, 1);
+    transform: scale(.6);
+    opacity: 0;
+    background-color: transparent;
+    box-shadow: 0 0 0 .05rem #000;
+}
+.btn-skin:hover:after,
+.btn-skin.hover:after {
+    transform: scale(1);
+    opacity: .08;
+    background-color: #000;
+}
+.btn-skin:focus {
+    outline: none;
+}
+.btn-skin:focus:after {
+    transform: scale(1);
+    opacity: .1;
+    background-color: rgba(0, 0, 0, .8);
+    box-shadow: inset 0 0 0 .05rem rgba(0, 0, 0, .9);
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

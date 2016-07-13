@@ -1,0 +1,64 @@
+<style>
+.has-backdrop {
+  position: relative;
+}
+.has-backdrop:before {
+  content: ' ';
+  display: block;
+  box-sizing: content-box;
+  box-shadow: 0 0 0 0rem rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  pointer-events: none;
+  transition: box-shadow .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.has-backdrop:hover:before,
+.has-backdrop:focus:before {
+  opacity: 1;
+  box-shadow: 0 0 0 9999rem rgba(0,0,0,.5);
+  visibility: visible;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div class="has-padding">
+          <a class="green btn has-backdrop">点击启用遮罩效果</a>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;a class=&quot;green btn has-backdrop&quot;&gt;&#x70b9;&#x51fb;&#x542f;&#x7528;&#x906e;&#x7f69;&#x6548;&#x679c;&lt;/a&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.has-backdrop {
+  position: relative;
+}
+.has-backdrop:before {
+  content: ' ';
+  display: block;
+  box-sizing: content-box;
+  box-shadow: 0 0 0 0rem rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  pointer-events: none;
+  transition: box-shadow .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.has-backdrop:hover:before,
+.has-backdrop:focus:before {
+  opacity: 1;
+  box-shadow: 0 0 0 9999rem rgba(0,0,0,.5);
+  visibility: visible;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>
