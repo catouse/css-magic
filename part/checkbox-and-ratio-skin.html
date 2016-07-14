@@ -1,0 +1,145 @@
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <div>
+          <div class="control">
+            <div class="checkbox">
+              <input type="checkbox" name="buyMethod">
+              <label for="buyMethod">使用匿名购买</label>
+            </div>
+          </div>
+          <div class="control">
+            <label>付款方式</label>
+            <div class="radio">
+              <input type="radio" name="payment">
+              <label for="payment">支付宝</label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="payment">
+              <label for="payment">网银</label>
+            </div>
+          </div>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;div class=&quot;control&quot;&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;buyMethod&quot;&gt;
+    &lt;label for=&quot;buyMethod&quot;&gt;&#x4f7f;&#x7528;&#x533f;&#x540d;&#x8d2d;&#x4e70;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;control&quot;&gt;
+  &lt;label&gt;&#x4ed8;&#x6b3e;&#x65b9;&#x5f0f;&lt;/label&gt;
+  &lt;div class=&quot;radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;payment&quot;&gt;
+    &lt;label for=&quot;payment&quot;&gt;&#x652f;&#x4ed8;&#x5b9d;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;payment&quot;&gt;
+    &lt;label for=&quot;payment&quot;&gt;&#x7f51;&#x94f6;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.radio,
+.checkbox {
+    position: relative;
+}
+.radio > input,
+.checkbox > input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.radio > input + label,
+.checkbox > input + label {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: .25rem 0 .25rem 1.25rem;
+}
+.radio > input + label:before,
+.checkbox > input + label:before,
+.radio > input + label:after,
+.checkbox > input + label:after {
+    position: absolute;
+    top: .3rem;
+    left: 0;
+    display: flex;
+    width: .9rem;
+    height: .9rem;
+    content: ' ';
+    transition: .3s cubic-bezier(.175, .885, .32, 1);
+    color: transparent;
+    border: .1rem solid #ccc;
+    align-items: center;
+    justify-content: center;
+}
+.radio > input + label:after,
+.checkbox > input + label:after {
+    transform: scale(0);
+    opacity: 0;
+    color: #808080;
+}
+.radio > input:focus + label:before,
+.checkbox > input:focus + label:before {
+    border-color: #2196f3;
+}
+.radio > input:checked + label:after,
+.checkbox > input:checked + label:after {
+    transform: scale(1);
+    opacity: 1;
+}
+.radio > input[disabled],
+.checkbox > input[disabled],
+.radio > input.disabled,
+.checkbox > input.disabled {
+    opacity: 0!important;
+}
+.radio > input[disabled] + label,
+.checkbox > input[disabled] + label,
+.radio > input.disabled + label,
+.checkbox > input.disabled + label {
+    opacity: .5;
+}
+.radio.inline-block + .inline-block,
+.checkbox.inline-block + .inline-block {
+    margin-left: .05rem;
+}
+.checkbox > input + label:after {
+    font-family: ZenIcon;
+    font-size: .7rem;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    content: '\e60d';
+    text-transform: none;
+    border: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.checkbox > input:focus + label:after {
+    color: #2196f3;
+}
+.radio > input + label:before {
+    border-radius: 1rem;
+}
+.radio > input + label:after {
+    top: .55rem;
+    left: .25rem;
+    width: .4rem;
+    height: .4rem;
+    border: none;
+    border-radius: .2rem;
+    background-color: #808080;
+}
+.radio > input:focus + label:after {
+    background-color: #2196f3;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

@@ -53,3 +53,8 @@
 .code.text-yellow {color: #ef8e00}
 .code.text-red {color: #e75c54}
 .code.text-purple {color: #b06ce5}
+
+@media (min-width: 35rem) {
+  .frameworks {padding: 2rem 0!important}
+  .frameworks h1 {margin-bottom: 2rem!important}
+}

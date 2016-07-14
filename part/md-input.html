@@ -1,0 +1,113 @@
+<style>
+.md-input {
+  padding-top: 1rem;
+  position: relative;
+}
+.md-input > label {
+  position: absolute;
+  line-height: 1rem;
+  height: 2.5rem;
+  padding: 1.25rem 0 0.25rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .4s;
+}
+.md-input > label:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  background-color: red;
+  height: .1rem;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  transition: left .3s, right .3s;
+}
+.md-input > input {
+  border-width: 0;
+  border-bottom-width: .1rem; 
+  padding-left: 0;
+  padding-right: 0;
+}
+.md-input > input:focus {
+  border-color: #ccc;
+}
+.md-input > input:valid + label,
+.md-input > input:focus + label {
+  padding-top: 0.25rem;
+  padding-bottom: 1.25rem;
+  font-size: .6rem;
+  color: #666;
+}
+.md-input > input:valid + label:before,
+.md-input > input:focus + label:before {
+  left: 0;
+  right: 0;
+}
+</style>
+<div class="content">
+  <div class="list">
+    <div class="item">
+      <div class="content">
+        <p>下面是一个用纯 CSS 实现的 Material Design 风格的输入框。</p>
+        <div class="space">
+          <div class="md-input">
+            <input type="text" class="input" id="account" name="account" required>
+            <label for="account">用户名</label>
+          </div>
+        </div>
+        <div><pre class="prettyprint"><code>&lt;div class=&quot;md-input&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;input&quot; id=&quot;account&quot; name=&quot;account&quot; required&gt;
+  &lt;label for=&quot;account&quot;&gt;&#x7528;&#x6237;&#x540d;&lt;/label&gt;
+&lt;/div&gt;</code></pre></div>
+        <div><pre class="prettyprint"><code>.md-input {
+  padding-top: 1rem;
+  position: relative;
+}
+.md-input > label {
+  position: absolute;
+  line-height: 1rem;
+  height: 2.5rem;
+  padding: 1.25rem 0 0.25rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .4s;
+}
+.md-input > label:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  background-color: red;
+  height: .1rem;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  transition: left .3s, right .3s;
+}
+.md-input > input {
+  border-width: 0;
+  border-bottom-width: .1rem; 
+  padding-left: 0;
+  padding-right: 0;
+}
+.md-input > input:focus {
+  border-color: #ccc;
+}
+.md-input > input:valid + label,
+.md-input > input:focus + label {
+  padding-top: 0.25rem;
+  padding-bottom: 1.25rem;
+  font-size: .6rem;
+  color: #666;
+}
+.md-input > input:valid + label:before,
+.md-input > input:focus + label:before {
+  left: 0;
+  right: 0;
+}</code></pre></div>
+      </div>
+     </div>
+  </div>
+</div>

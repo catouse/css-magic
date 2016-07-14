@@ -56,22 +56,22 @@ var contents = [{
     items: [{name: 'responsive-square', title: '自适应正方形', classes: ':before/:after'},
         {name: 'responsive-media', title: '等比例自适应媒体内容', classes: ':before/:after'},
         {name: 'flip-card', title: '翻转卡片', classes: ':hover'},
-        {name: 'md-input', title: '占位标签输入框', classes: ':focus'},
+        {name: 'md-input', title: '占位标签输入框', classes: ':focus,:valid'},
         {name: 'file-input-control', title: '文件上传控件外观', classes: ':before,:after', star: false},
         {name: 'ratio-and-checkbox', title: '单选框和复选框外观', classes: ':checked'},
         {name: 'switch', title: '开关', classes: ':checked'},
-        {name: 'checkbox-and-ratio-skin', title: '重置单选和复选外观', classes: ':checked,:before,:after'},
+        {name: 'checkbox-and-ratio-skin', title: '重置单选和复选外观', classes: ':checked,:before,:after,:focus'},
         {name: 'css-tabs', title: '纯 CSS 实现标签页', classes: ':hover,:active,:checked,:nth-of-type', star: false},
         {name: 'css-collapse-panel', title: '纯 CSS 实现折叠面板', classes: ':checked', star: false},
-        {name: 'css-carousel', title: '纯 CSS 实现折叠面板', classes: ':checked', star: false},
+        {name: 'css-carousel', title: '纯 CSS 实现轮播', classes: ':checked', star: false},
         {name: 'css-modal', title: '纯 CSS 实现对话框', classes: ':checked', star: false},
         {name: 'css-treeview', title: '纯 CSS 实现树形菜单', classes: ':checked', star: false
     }]
 }];
 
-$(function() {
-    $('#lead').css('height', $(window).height());
+$('#lead').css('height', $(window).height());
 
+$(function() {
     var $contentList = $('#contentList');
 
     var updateContents = function() {
@@ -83,11 +83,13 @@ $(function() {
             $tile.append('<div class="heading"><div class="title">' + section.title + '</div></div>');
             var $list = $('<div class="list section"/>', {id: 'section-' + section.name}).data('section', section);
             $.each(section.items, function(itemIndex, item) {
+                var avatarText = index < 6 ? '1~5' : index;
                 var $a = $('<a>', {
-                    href: 'part/' + item.name + '.html',
+                    "data-remote": 'part/' + item.name + '.html',
+                    "href": '#' + item.name,
+                    "data-id": avatarText,
                     'class': 'item with-avatar multi-lines'
                 }).data({item: item});
-                var avatarText = index < 6 ? '1~5' : index;
                 $a.append($('<div/>', {'class': 'avatar rounded', 'data-skin': index}).text(avatarText));
                 var $content = $('<div class="content"/>');
                 $content.append('<div class="title strong">' + item.title + '</div>');
@@ -148,8 +150,12 @@ $(function() {
 
     $contentList.modal({
         selector: 'a.item',
-        trigger: 'click',
         name: "contentModal",
+        target: '!new',
+        preventDefault: false,
+        show: function(options) {
+            console.log(options);
+        },
         remoteError: function(e, options) {
             console.log("无法加载：", e.responseURL);
         },
@@ -169,4 +175,11 @@ $(function() {
             $target.children('.content').listenScroll({container: 'parent'}).prepend($magic);
         }
     });
+
+    // check window hash
+    var hash = window.location.hash;
+    if($.isStr(hash) && hash.length > 1) {
+        hash = hash.substr(1);
+        $('[href="#' + hash + '"],[data-id="' + hash + '"]').trigger($.TapName);
+    }
 });

@@ -1,5 +1,5 @@
 /*!
- * mzui - v0.1.0 - 2016-07-12
+ * mzui - v1.0.0 - 2016-07-14
  * Copyright (c) 2016 cnezsoft.com; Licensed MIT
  */
 
@@ -2042,14 +2042,14 @@ window.CoreLib = window['jQuery'] || window['Zepto'];
 
             if($this.is('a')) {
                 var href = $this.attr('href');
-                if(href && href !== '#' && href.indexOf('##') < 0) {
+                if(!options.target && href && href !== '#' && href.indexOf('##') < 0) {
                     if(/^#[a-z]/i.test(href)) {
                         thisOptions.target = href;
                     } else if(!thisOptions.remote) {
                         thisOptions.remote = href;
                     }
                 }
-                if(e) e.preventDefault();
+                if(e && options.preventDefault !== false) e.preventDefault();
             }
             that[options.triggerMethod](thisOptions);
         };
