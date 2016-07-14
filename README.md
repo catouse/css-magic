@@ -1,6 +1,7 @@
 # CSS 魔法类
 
-使用 CSS 伪类和伪元素的 61 种方法
+使用 CSS 伪类和伪元素的 61 种方法。
+访问网站 https://catouse.github.io/css-magic/ 了解更多。
 
 ![Magic Header](https://github.com/Catouse/css-magic/raw/master/img/css-magic.png)
 
