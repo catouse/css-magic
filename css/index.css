@@ -58,3 +58,5 @@
   .frameworks {padding: 2rem 0!important}
   .frameworks h1 {margin-bottom: 2rem!important}
 }
+
+body.display-show-contentModal {overflow: hidden}
